@@ -5,6 +5,7 @@
     $(this).on('click', function() {
       player.getDuration();
     })
+  $('#time-control .total-time').text( nextSong.duration );
   });
 
    $('button#next').on('click', function() {
@@ -16,6 +17,8 @@
 
     const nextSong = album.songs[nextSongIndex];
     player.playPause(nextSong);
+
+    $('#time-control .total-time').text( nextSong.duration );
 
     $('#time-control .total-time').on('click', function() {
       player.getDuration();
@@ -32,6 +35,8 @@
 
     const previousSong = album.songs[previousSongIndex];
     player.playPause(previousSong);
+
+    $('#time-control .total-time').text( nextSong.duration );
 
     $('#time-control .total-time').on('click', function() {
       player.getDuration();
