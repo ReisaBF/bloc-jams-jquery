@@ -2,9 +2,8 @@
   $('button#play-pause').on('click', function() {
     player.playPause();
     $(this).attr('playState', player.playState);
-    $(this).on('click', function() {
-      player.getDuration();
-    })
+    const duration = player.getDuration();
+    $('#time-control .total-time').text(duration);
   });
 
    $('button#next').on('click', function() {
