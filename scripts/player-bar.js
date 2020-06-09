@@ -3,7 +3,7 @@
     player.playPause();
     $(this).attr('playState', player.playState);
     const duration = player.getDuration();
-    $('#time-control .total-time').text(duration);
+   $('#time-control .total-time').text(duration);
   });
 
    $('button#next').on('click', function() {
@@ -53,7 +53,5 @@
      const currentVolume = player.getTime();
      const total = player.getDuration();
      const percent = (currentVolume / total) * 100;
-     $('#volume-control .current-volume').text( currentVolume );
-     $('#volume-control input').val(percent);
    }, 1000);
 }
