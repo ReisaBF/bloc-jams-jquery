@@ -29,7 +29,7 @@
     const previousSong = album.songs[previousSongIndex];
     player.playPause(previousSong);
 
-    $('#time-control .total-time').text( nextSong.duration );
+    $('#time-control .total-time').text( previousSong.duration );
 
     $('#time-control .total-time').on('click', function() {
       player.getDuration();
